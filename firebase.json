@@ -3,8 +3,16 @@
     "public": "dist",
     "rewrites": [
       {
+        "source": "/app/**",
+        "function": "app"
+      },
+      {
+        "source": "/robots.txt",
+        "destination": "/robots.txt"
+      },
+      {
         "source": "**",
-        "destination": "/index.html"
+        "function": "ssr"
       }
     ]
   }
